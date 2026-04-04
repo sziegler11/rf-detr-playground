@@ -1,0 +1,13 @@
+# COCO 128-image sample — fast sanity check with 80 classes
+# Use this to verify training pipeline works before longer runs
+
+dataset_name: coco128
+model_size: base
+
+epochs: 20
+batch_size: 4
+grad_accum_steps: 4
+lr: 0.0001
+
+early_stopping: true
+early_stopping_patience: 10
