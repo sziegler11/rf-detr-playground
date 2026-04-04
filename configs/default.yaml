@@ -1,0 +1,27 @@
+# Default RF-DETR training configuration
+# Override values in dataset-specific configs
+
+model_size: base
+
+# Training hyperparameters
+epochs: 50
+batch_size: 4
+grad_accum_steps: 4    # effective batch = batch_size * grad_accum_steps = 16
+lr: 0.0001
+weight_decay: 0.0001
+
+# Image resolution
+img_size: 560
+
+# Output
+output_dir: outputs
+
+# Early stopping
+early_stopping: true
+early_stopping_patience: 15
+early_stopping_min_delta: 0.005
+
+# Logging (set to true to enable)
+tensorboard: false
+wandb: false
+wandb_project: rf-detr-playground

@@ -1,0 +1,13 @@
+# Aquarium dataset — 7-class underwater detection
+# Small dataset, great for quick fine-tuning experiments
+
+dataset_name: aquarium
+model_size: base
+
+epochs: 30
+batch_size: 4
+grad_accum_steps: 4
+lr: 0.0001
+
+early_stopping: true
+early_stopping_patience: 10

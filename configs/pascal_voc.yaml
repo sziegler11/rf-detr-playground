@@ -1,0 +1,13 @@
+# Pascal VOC 2012 — 20-class classic detection benchmark
+# Larger dataset; consider using a GPU instance for training
+
+dataset_name: pascal_voc
+model_size: base
+
+epochs: 50
+batch_size: 4
+grad_accum_steps: 4
+lr: 0.0001
+
+early_stopping: true
+early_stopping_patience: 15
