@@ -8,7 +8,7 @@ build/
 *.egg
 
 # Data & outputs
-data/
+/data/
 outputs/
 *.pt
 *.pth
