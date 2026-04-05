@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=68.0", "wheel"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "rf-detr-playground"
@@ -12,25 +12,27 @@ license = {text = "MIT"}
 
 dependencies = [
     "rfdetr>=1.0",
-    "torch>=2.0",
-    "torchvision>=0.15",
+    "torch>=2.2",
+    "torchvision>=0.17",
     "pycocotools>=2.0",
     "supervision>=0.19",
+    "transformers>=4.38,<5",
     "matplotlib>=3.7",
     "seaborn>=0.12",
     "pyyaml>=6.0",
     "click>=8.0",
     "tqdm>=4.65",
     "Pillow>=9.0",
-    "numpy>=1.24",
+    "numpy>=1.24,<2",
     "pandas>=2.0",
 ]
 
 [project.optional-dependencies]
 metrics = ["rfdetr[metrics]"]
 plus = ["rfdetr[plus]"]
+roboflow = ["roboflow>=1.0"]
 dev = ["pytest>=7.0", "pytest-cov>=4.0"]
-all = ["rf-detr-playground[metrics,plus,dev]"]
+all = ["rfdetr[metrics]", "rfdetr[plus]", "roboflow>=1.0", "pytest>=7.0", "pytest-cov>=4.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
